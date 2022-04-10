@@ -44,7 +44,7 @@ The script is only tested on Windows and the UndertaleModTool GUI, using other o
 <details>
 <summary>Manual steps</summary>
 
-Everything that the automated script does can be done manually if you have trouble with the script, please do file a GitHub issue or contact our Discord so the script can be fixed though!
+Everything that the automated script does can be done manually if you have trouble with the script, please do [file a GitHub issue](https://github.com/chicory-pizza/chicory-macaroni/issues) or [contact our Discord](https://data.chicory.pizza/discord) so the script can be fixed though!
 
 1. Obtain the Windows and Mac editions of the game
 
@@ -99,4 +99,6 @@ I asked on the modding Discord for a good food pun, and Somewhat immediately sug
 
 ## License
 
-GPL v3.0, same as UndertaleModTool
+[This script is open-sourced on GitHub!](https://github.com/chicory-pizza/chicory-macaroni)
+
+Licensed under GPL v3.0, same as UndertaleModTool
