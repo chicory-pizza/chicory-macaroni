@@ -4,7 +4,7 @@ This script automates the process of converting the Mac edition of Chicory: A Co
 
 The main reason to do this is that the Windows edition is compiled using YYC which makes game scripts uneditable, however the Mac edition somehow wasn’t compiled with YYC.
 
-If you have trouble getting this to work, check out our [Chicory fan Discord](https://data.chicory.pizza/discord)!
+If you have trouble getting this to work, check out our [Chicory fan Discord](https://discord.chicory.pizza)!
 
 ## How to use
 
@@ -12,7 +12,7 @@ First of all, **make a backup of your save!!** You can find it at `%localappdata
 
 1. Obtain the Windows and Mac editions of the game, you need both `data.win` and `game.ios`
 
-   If you don’t have a spare Mac, follow these steps to download the Mac edition
+   If you don’t have a spare Mac, follow these steps to download the Mac edition (only available through Steam)
 
    1. Press <kbd>Win</kbd>+<kbd>R</kbd> to open the Run dialog
    2. Enter `steam://nav/console` and click OK
@@ -21,7 +21,7 @@ First of all, **make a backup of your save!!** You can find it at `%localappdata
    5. Once finished, you can locate the download at `C:\Program Files (x86)\Steam\steamapps\content\app_1123450\depot_1123452`
 
 2. Download [UndertaleModTool](https://github.com/krzys-h/UndertaleModTool/releases) and extract it, despite its name, it’s not just for Undertale!
-3. Download [the script](https://github.com/chicory-pizza/chicory-macaroni/archive/refs/heads/master.zip) and extract it
+3. Download [the Macaroni script](https://github.com/chicory-pizza/chicory-macaroni/archive/refs/heads/master.zip) and extract it
 4. Run UndertaleModTool
 5. Click Scripts > Run other script...
 6. Find and select `ConvertChicoryMacaroni.csx`
@@ -47,7 +47,7 @@ The script is only tested on Windows and the UndertaleModTool GUI, using other o
 <details>
 <summary>Manual steps</summary>
 
-Everything that the automated script does can be done manually if you have trouble with the script, please do [file a GitHub issue](https://github.com/chicory-pizza/chicory-macaroni/issues) or [contact our Discord](https://data.chicory.pizza/discord) so the script can be fixed though!
+Everything that the automated script does can be done manually if you have trouble with the script, please do [file a GitHub issue](https://github.com/chicory-pizza/chicory-macaroni/issues) or [contact our Discord](https://discord.chicory.pizza) so the script can be fixed though!
 
 1. Obtain the Windows and Mac editions of the game
 
@@ -104,4 +104,4 @@ I asked on the modding Discord for a good food pun, and Somewhat immediately sug
 
 [This script is open-sourced on GitHub!](https://github.com/chicory-pizza/chicory-macaroni)
 
-Licensed under GPL v3.0, same as UndertaleModTool
+[Licensed under GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html), same as UndertaleModTool.
