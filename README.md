@@ -21,7 +21,7 @@ First of all, **make a backup of your save!!** You can find it at `%localappdata
    5. Once finished, you can locate the download at `C:\Program Files (x86)\Steam\steamapps\content\app_1123450\depot_1123452`
 
 2. Download [UndertaleModTool](https://github.com/krzys-h/UndertaleModTool/releases) and extract it, despite its name, it’s not just for Undertale!
-3. Download [the Macaroni script](https://github.com/chicory-pizza/chicory-macaroni/archive/refs/heads/master.zip) and extract it
+3. Download [the Macaroni script](https://github.com/chicory-pizza/chicory-macaroni/archive/refs/heads/main.zip) and extract it
 4. Run UndertaleModTool
 5. Click Scripts > Run other script...
 6. Find and select `ConvertChicoryMacaroni.csx`
@@ -32,6 +32,20 @@ First of all, **make a backup of your save!!** You can find it at `%localappdata
 You’re all done! You should be able to open `macaroni.win` in UndertaleModTool to start editing game scripts.
 
 To run the game, just open `RunMacaroni.bat`
+
+<details>
+<summary>Non-Steam players</summary>
+
+The Mac edition is only available on Steam, if you obtained the game outside Steam, please contact our [Chicory fan Discord](https://discord.chicory.pizza) which we can try other methods.
+
+</details>
+
+<details>
+<summary>Game Pass/Microsoft Store players</summary>
+
+It's possible to convert the Game Pass/Microsoft Store edition to use Macaroni, however you will lose Xbox integration such as achievements and save files.
+
+</details>
 
 <details>
 <summary>Troubleshooting</summary>
