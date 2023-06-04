@@ -35,7 +35,7 @@ if (data?.GeneralInfo?.DisplayName?.Content == "Chicory_A_Colorful_Tale")
 {
     throw new ScriptException("You are loading the Mac data file for the Windows edition, or this data file is already converted.");
 }
-else if (data?.GeneralInfo?.DisplayName?.Content != "Chicory: A Colorful Tale")
+else if (!IsValidWindowsDataFile(data))
 {
     throw new ScriptException("The data file for the Windows edition is not the Chicory game.");
 }
@@ -129,6 +129,21 @@ string GetTempFolder()
     Directory.CreateDirectory(tempFolder);
 
     return tempFolder + "\\";
+}
+
+bool IsValidWindowsDataFile(UndertaleData data)
+{
+    if (data?.GeneralInfo?.DisplayName?.Content == "Chicory: A Colorful Tale") // .59
+    {
+        return true;
+    }
+
+    if (data?.GeneralInfo?.DisplayName?.Content == "Created with GameMaker" && data?.GeneralInfo?.Name?.Content == "paintdog") // Steam Windows .66
+    {
+        return true;
+    }
+
+    return false;
 }
 
 // Based from ExportShaderData.csx

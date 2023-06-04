@@ -15,7 +15,7 @@ First of all, **make a backup of your save!!** You can find it at `%localappdata
    If you don’t have a spare Mac, follow these steps to download the Mac edition (only available through Steam)
 
    1. Press <kbd>Win</kbd>+<kbd>R</kbd> to open the Run dialog
-   2. Enter `steam://nav/console` and click OK
+   2. Enter `steam://open/console` and click OK
    3. Enter `download_depot 1123450 1123452` in the Steam console
    4. Wait for a “Depot download complete” message
    5. Once finished, you can locate the download at `C:\Program Files (x86)\Steam\steamapps\content\app_1123450\depot_1123452`
@@ -36,9 +36,9 @@ To run the game, just open `RunMacaroni.bat`
 <details>
 <summary>Troubleshooting</summary>
 
-The script was originally built for UndertaleModTool v0.4.0.4, using older or newer versions may or may not work correctly.
+The script was originally built for UndertaleModTool v0.5.1.0, using older or newer versions may or may not work correctly.
 
-The script was tested against the game data files of Windows edition v1.0.0.59 and Mac edition v1.0.0.57, using other versions may or may not work correctly.
+The script was tested against the game data files of Windows edition v1.0.0.66 and Mac edition v1.0.0.66, using other versions may or may not work correctly.
 
 The script is only tested on Windows and the UndertaleModTool GUI, using other operating systems or the CLI are not guaranteed to work.
 
@@ -53,26 +53,26 @@ Everything that the automated script does can be done manually if you have troub
 
 2. Merge the shaders from the Windows edition to the Mac data
 
-   2. Open `data.win` (Windows edition) in UndertaleModTool
-   3. Click Scripts > Unpack assets > ExportShaderData.csx
-   4. Select an export folder
-   5. Open `game.ios` (Mac edition) in UndertaleModTool
-   6. Click Scripts > Repack assets > ImportShaderData.csx
-   7. Select the previous export folder
-   8. Save the newly modified data as `macaroni.win` next to `data.win` (Windows edition)
+   1. Open `data.win` (Windows edition) in UndertaleModTool
+   2. Click Scripts > Unpack assets > ExportShaderData.csx
+   3. Select an export folder
+   4. Open `game.ios` (Mac edition) in UndertaleModTool
+   5. Click Scripts > Repack assets > ImportShaderData.csx
+   6. Select the previous export folder
+   7. Save the newly modified data as `macaroni.win` next to `data.win` (Windows edition)
 
-3. Obtain GameMaker runner version 2.3.2.426
+3. Obtain GameMaker runner version 2022.9.1.66
 
-   1. Download the Windows edition of GameMaker at [https://accounts.yoyogames.com/downloads](https://accounts.yoyogames.com/downloads), you need a free YoYo Account
+   1. Download the Windows edition of GameMaker at [https://gamemaker.io/en/download](https://gamemaker.io/en/download)
    2. Once GameMaker is installed and running, click File > Preferences
    3. Go to Runtime Feeds > Master
-   4. Install version 2.3.2.426
-   5. Go to `C:\ProgramData\GameMakerStudio2\Cache\runtimes\runtime-2.3.2.426\windows` and copy `Runner.exe` next to Chicory's `data.win`
+   4. Install version 2022.9.1.66
+   5. Go to `C:\ProgramData\GameMakerStudio2\Cache\runtimes\runtime-2022.9.1.66\windows\x64` and copy `Runner.exe` next to Chicory's `data.win`
 
 4. Create a batch file with this contents and save as `RunMacaroni.bat` inside the game folder
 
-   ```
-   start .\Runner.exe -game macaroni.win
+   ```batch
+   start .\Runner.exe -game macaroni.win -debugoutput %temp%\macaroni.log
    ```
 
 To run the game, just open `RunMacaroni.bat`
@@ -81,9 +81,7 @@ To run the game, just open `RunMacaroni.bat`
 
 ## How to tell it’s working
 
-- Game icon is a generic GameMaker logo
 - Title bar says “Chicory_A_Colorful_Tale” (underscores)
-- Game version on the main menu is v1.0.0.57
 
 ## How to revert
 
