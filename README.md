@@ -12,15 +12,15 @@ First of all, **make a backup of your save!!** You can find it at `%localappdata
 
 1. Obtain the Windows and Mac editions of the game, you need both `data.win` and `game.ios`
 
-   If you don’t have a spare Mac, follow these steps to download the Mac edition (only available through Steam)
+   Follow these steps to download the Mac edition (only available through Steam)
 
    1. Press <kbd>Win</kbd>+<kbd>R</kbd> to open the Run dialog
    2. Enter `steam://open/console` and click OK
-   3. Enter `download_depot 1123450 1123452` in the Steam console
+   3. Enter `download_depot 1123450 1123452 2137359438458453377` in the Steam console
    4. Wait for a “Depot download complete” message
    5. Once finished, you can locate the download at `C:\Program Files (x86)\Steam\steamapps\content\app_1123450\depot_1123452`
 
-2. Download [UndertaleModTool](https://github.com/krzys-h/UndertaleModTool/releases) and extract it, despite its name, it’s not just for Undertale!
+2. Download [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool/releases) and extract it, despite its name, it’s not just for Undertale!
 3. Download [the Macaroni script](https://github.com/chicory-pizza/chicory-macaroni/archive/refs/heads/main.zip) and extract it
 4. Run UndertaleModTool
 5. Click Scripts > Run other script...
@@ -41,18 +41,11 @@ The Mac edition is only available on Steam, if you obtained the game outside Ste
 </details>
 
 <details>
-<summary>Game Pass/Microsoft Store players</summary>
-
-It's possible to convert the Game Pass/Microsoft Store edition to use Macaroni, however you will lose Xbox integration such as achievements and save files.
-
-</details>
-
-<details>
 <summary>Troubleshooting</summary>
 
-The script was originally built for UndertaleModTool v0.5.1.0, using older or newer versions may or may not work correctly.
+The script was originally built for UndertaleModTool v0.7.0.0, using older or newer versions may or may not work correctly.
 
-The script was tested against the game data files of Windows edition v1.0.0.66 and Mac edition v1.0.0.66, using other versions may or may not work correctly.
+The script was tested against the game data files of Windows edition `v1.0.0.66 6/28/2023` and Mac edition `v1.0.0.66 08/16/23`, using other versions may or may not work correctly.
 
 The script is only tested on Windows and the UndertaleModTool GUI, using other operating systems or the CLI are not guaranteed to work.
 
@@ -65,6 +58,8 @@ Everything that the automated script does can be done manually if you have troub
 
 1. Obtain the Windows and Mac editions of the game
 
+   For the Mac edition, do not use the [latest manifest ID](https://steamdb.info/depot/1123452/manifests/) as it uses YYC, use manifest ID 2137359438458453377 instead
+
 2. Merge the shaders from the Windows edition to the Mac data
 
    1. Open `data.win` (Windows edition) in UndertaleModTool
@@ -75,13 +70,13 @@ Everything that the automated script does can be done manually if you have troub
    6. Select the previous export folder
    7. Save the newly modified data as `macaroni.win` next to `data.win` (Windows edition)
 
-3. Obtain GameMaker runner version 2022.9.1.66
+3. Obtain GameMaker runner version 2.3.6.464
 
    1. Download the Windows edition of GameMaker at [https://gamemaker.io/en/download](https://gamemaker.io/en/download)
    2. Once GameMaker is installed and running, click File > Preferences
    3. Go to Runtime Feeds > Master
-   4. Install version 2022.9.1.66
-   5. Go to `C:\ProgramData\GameMakerStudio2\Cache\runtimes\runtime-2022.9.1.66\windows\x64` and copy `Runner.exe` next to Chicory's `data.win`
+   4. Install version 2.3.6.464
+   5. Go to `C:\ProgramData\GameMakerStudio2\Cache\runtimes\runtime-2.3.6.464\windows` and copy `Runner.exe` next to Chicory’s `data.win`
 
 4. Create a batch file with this contents and save as `RunMacaroni.bat` inside the game folder
 
@@ -95,7 +90,9 @@ To run the game, just open `RunMacaroni.bat`
 
 ## How to tell it’s working
 
+- Game icon is a generic GameMaker logo
 - Title bar says “Chicory_A_Colorful_Tale” (underscores)
+- Game version on the main menu is `v1.0.0.66 8/16/2023`
 
 ## How to revert
 
@@ -110,7 +107,7 @@ I asked on the modding Discord for a good food pun, and Somewhat immediately sug
 ## Special thanks
 
 - [JdavisBro](https://github.com/JdavisBro) for figuring all this out, this script just automates most of the steps to be less tedious
-- Undertale modding community for [UndertaleModTool](https://github.com/krzys-h/UndertaleModTool)
+- Undertale modding community for [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool)
 
 ## License
 
