@@ -18,10 +18,11 @@ jobs:
 
       - name: Create zip for GitHub release
         run: |
-          zip -rj "Chicory Macaroni.zip" macaroni/
+          zip -rj "Chicory_Macaroni.zip" macaroni/
 
       - name: Create release
         uses: softprops/action-gh-release@v2
         with:
+          # spaces in file names change to dots on upload :(
           files: |
-            Chicory Macaroni.zip
+            Chicory_Macaroni.zip
