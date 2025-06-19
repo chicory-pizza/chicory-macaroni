@@ -1,4 +1,4 @@
 rem Chicory Macaroni
-rem https://github.com/chicory-pizza/chicory-macaroni
+rem https://macaroni.chicory.pizza
 
-start .\Runner.exe -game macaroni.win -debugoutput %temp%\macaroni.log
+start .\Runner.exe -game macaroni.win -debugoutput %temp%\chicory-macaroni.log

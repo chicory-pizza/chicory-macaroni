@@ -1,5 +1,5 @@
 // Chicory Macaroni
-// https://github.com/chicory-pizza/chicory-macaroni
+// https://macaroni.chicory.pizza
 
 using System;
 using System.Collections.Generic;
@@ -67,6 +67,9 @@ IncrementProgressParallel();
 
 // Save
 await SaveFile(Path.GetDirectoryName(windowsDataFile) + "\\" + MacaroniFileName);
+
+// Cleanup
+Directory.Delete(tempFolder, true);
 
 HideProgressBar();
 ScriptMessage("Finished!\n\n" + MacaroniFileName + " is now saved to your Windows game folder.\n\nYou should be able to open that file to start editing game scripts.\n\n---\n\nTo run the game:\n\n1. Copy Runner.exe and RunMacaroni.bat to your Windows game folder\n\n2. Open RunMacaroni.bat");
