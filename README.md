@@ -21,7 +21,7 @@ First of all, **make a backup of your save!!** You can find it at `%localappdata
    5. Once finished, you can locate the download at `C:\Program Files (x86)\Steam\steamapps\content\app_1123450\depot_1123452`
 
 2. Download [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool/releases) and extract it, despite its name, it’s not just for Undertale!
-3. Download [the Macaroni script](https://github.com/chicory-pizza/chicory-macaroni/archive/refs/heads/main.zip) and extract it
+3. Download [the Chicory Macaroni zip](https://github.com/chicory-pizza/chicory-macaroni/releases/latest/download/Chicory%20Macaroni.zip) and extract it
 4. Run UndertaleModTool
 5. Click Scripts > Run other script...
 6. Find and select `ConvertChicoryMacaroni.csx`
