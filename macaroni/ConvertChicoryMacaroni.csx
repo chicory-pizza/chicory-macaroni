@@ -40,11 +40,11 @@ else if (!IsValidWindowsDataFile(data))
     throw new ScriptException("The data file for the Windows edition is not the Chicory game.");
 }
 
-IncProgressP();
+IncrementProgressParallel();
 
 string tempFolder = GetTempFolder();
 ExportShaderData(tempFolder);
-IncProgressP();
+IncrementProgressParallel();
 
 // Now load the Mac edition, import the shaders
 await LoadFile(macDataFile);
@@ -57,10 +57,10 @@ else if (data?.GeneralInfo?.DisplayName?.Content != "Chicory_A_Colorful_Tale")
     throw new ScriptException("The data file for the Mac edition is not the Chicory game.");
 }
 
-IncProgressP();
+IncrementProgressParallel();
 
 ImportShaderData.Import(data, tempFolder);
-IncProgressP();
+IncrementProgressParallel();
 
 // Save
 await SaveFile(Path.GetDirectoryName(windowsDataFile) + "\\" + MacaroniFileName);

@@ -43,7 +43,7 @@ The Mac edition is only available on Steam, if you obtained the game outside Ste
 <details>
 <summary>Troubleshooting</summary>
 
-The script was originally built for UndertaleModTool v0.7.0.0, using older or newer versions may or may not work correctly.
+The script was originally built for UndertaleModTool v0.8.2.0, using older or newer versions may or may not work correctly.
 
 The script was tested against the game data files of Windows edition `v1.0.0.66 6/28/2023` and Mac edition `v1.0.0.66 08/16/23`, using other versions may or may not work correctly.
 
