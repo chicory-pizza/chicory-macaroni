@@ -14,14 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # https://github.com/actions/checkout/releases/tag/v6.0.2
 
       - name: Create zip for GitHub release
         run: |
           zip -rj "Chicory_Macaroni.zip" macaroni/
 
       - name: Create release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda # https://github.com/softprops/action-gh-release/releases/tag/v3.0.0
         with:
           # spaces in file names change to dots on upload :(
           files: |

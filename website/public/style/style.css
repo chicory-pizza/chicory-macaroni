@@ -1,0 +1,164 @@
+/* Original font from https://www.dafont.com/domigorgon.font, Domigorgon Plus modified by Legendknight 3000 */
+@font-face {
+	font-family: 'Domigorgon';
+	src:
+		url('./domigorgon_plus-webfont.woff2') format('woff2'),
+		url('./domigorgon_plus-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--body-background-color: #fff;
+	--body-text-color: #000;
+	--details-background-color: #eee;
+	--pre-background-color: #ddd;
+	--box-border-color: #999;
+
+	--luncheon-purple: rgb(182, 154, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-background-color: #1c1c1c;
+		--body-text-color: #fff;
+		--details-background-color: #222;
+		--pre-background-color: #333;
+		--box-border-color: #555;
+	}
+}
+
+body {
+	background: var(--body-background-color);
+	color: var(--body-text-color);
+	font-family: system-ui, sans-serif;
+	font-size: 1.15rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin: 0;
+	text-align: left;
+}
+
+::selection {
+	background: var(--luncheon-purple);
+	color: #000;
+}
+
+a {
+	color: var(--luncheon-purple);
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: color-mix(in hsl, var(--luncheon-purple), #000 20%);
+}
+
+h1,
+h2,
+h3 {
+	font-family: Domigorgon, system-ui, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin: 1rem 0 0.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+	margin: 1rem 0 0.5rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+p {
+	margin: 0 0 1.5rem;
+}
+
+ul,
+ol {
+	margin: 0;
+}
+
+.markdown li {
+	margin: 0 0 0.5rem;
+}
+
+.markdown li > p {
+	margin: 0 0 0.5rem;
+}
+
+.markdown li > p:only-child {
+	margin: 0;
+}
+
+details {
+	background-color: var(--details-background-color);
+	border: 1px solid var(--box-border-color);
+	margin-bottom: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+summary {
+	cursor: pointer;
+}
+
+details[open] > summary {
+	margin-bottom: 1rem;
+}
+
+details > p:last-child {
+	margin-bottom: 0;
+}
+
+details + h2 {
+	margin-top: 1.5rem;
+}
+
+pre {
+	background-color: var(--pre-background-color);
+	border: 1px solid var(--box-border-color);
+	padding: 1rem;
+}
+
+#content {
+	margin: 0 auto;
+	max-width: 1012px;
+	padding: 0 1rem 2rem;
+}
+
+.websiteLinks {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.websiteLink {
+	display: block;
+	opacity: 0.6;
+	line-height: 1;
+}
+
+.websiteLink:hover,
+.websiteLink:active,
+.websiteLink:focus {
+	opacity: 1;
+}
+
+.websiteLink svg {
+	width: 32px;
+	height: 32px;
+	fill: var(--body-text-color);
+}
+
+.websiteLink.discord:hover svg,
+.websiteLink.discord:active svg,
+.websiteLink.discord:focus svg {
+	fill: #5865f2;
+}
