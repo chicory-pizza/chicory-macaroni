@@ -23,6 +23,15 @@ if (windowsDataFile == null)
     return;
 }
 
+string MacaroniFilePath = Path.GetDirectoryName(windowsDataFile) + "\\" + MacaroniFileName;
+if (File.Exists(MacaroniFilePath))
+{
+    if (!ScriptQuestion("macaroni.win already exists next to data.win on this folder, overwrite anyway?"))
+    {
+        return;
+    }
+}
+
 string macDataFile = PromptDataFile("Select game.ios from the Mac edition", "ios");
 if (macDataFile == null)
 {
@@ -67,7 +76,7 @@ await importer.StartImport();
 IncrementProgressParallel();
 
 // Save
-await SaveFile(Path.GetDirectoryName(windowsDataFile) + "\\" + MacaroniFileName);
+await SaveFile(MacaroniFilePath);
 
 // Cleanup
 Directory.Delete(tempFolder, true);
