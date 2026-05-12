@@ -31,6 +31,7 @@ if (macDataFile == null)
 
 // Load the Windows edition, export the shaders
 SetProgressBar("Baking Macaroni...", "Working, please wait...", 0, 5);
+StartProgressBarUpdater();
 
 await LoadFile(windowsDataFile);
 if (data?.GeneralInfo?.DisplayName?.Content == "Chicory_A_Colorful_Tale")
@@ -45,7 +46,7 @@ else if (!IsValidWindowsDataFile(data))
 IncrementProgressParallel();
 
 string tempFolder = GetTempFolder();
-ExportShaderData(tempFolder);
+await ExportShaderData(tempFolder);
 IncrementProgressParallel();
 
 // Now load the Mac edition, import the shaders
@@ -62,7 +63,7 @@ else if (data?.GeneralInfo?.DisplayName?.Content != "Chicory_A_Colorful_Tale")
 IncrementProgressParallel();
 
 ImportShaders importer = new ImportShaders(data, tempFolder);
-importer.StartImport();
+await importer.StartImport();
 IncrementProgressParallel();
 
 // Save
@@ -71,16 +72,19 @@ await SaveFile(Path.GetDirectoryName(windowsDataFile) + "\\" + MacaroniFileName)
 // Cleanup
 Directory.Delete(tempFolder, true);
 
+await StopProgressBarUpdater();
 HideProgressBar();
 ScriptMessage("Finished!\n\n" + MacaroniFileName + " is now saved to your Windows game folder.\n\nYou should be able to open that file to start editing game scripts.\n\n---\n\nTo run the game:\n\n1. Copy Runner.exe and RunMacaroni.bat to your Windows game folder\n\n2. Open RunMacaroni.bat");
 
 // Functions
 string PromptDataFile(string title, string extension)
 {
-    OpenFileDialog dlg = new OpenFileDialog();
-    dlg.DefaultExt = extension;
-    dlg.Filter = "Game Maker Studio data files (." + extension + ")|*." + extension + "|All files|*";
-    dlg.Title = title;
+    OpenFileDialog dlg = new OpenFileDialog
+    {
+        DefaultExt = extension,
+        Filter = "Game Maker Studio data files (." + extension + ")|*." + extension + "|All files|*",
+        Title = title
+    };
 
     return dlg.ShowDialog() == DialogResult.OK ? dlg.FileName : null;
 }
@@ -154,7 +158,7 @@ bool IsValidWindowsDataFile(UndertaleData data)
 
 // Based from ExportAllShaders.csx
 #region Export
-void ExportShaderData(string exportFolder)
+async Task ExportShaderData(string exportFolder)
 {
     foreach (UndertaleShader shader in data.Shaders)
     {
@@ -207,7 +211,7 @@ public class ImportShaders(UndertaleData data, string importFolder)
     private UndertaleData Data = data;
     private string ImportFolder = importFolder;
 
-    public void StartImport()
+    async public Task StartImport()
     {
         var shadersToModify = Directory.GetDirectories(ImportFolder).Select(x => Path.GetFileName(x));
 
